@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		094FB263BE5CF16444FF6506 /* Pods_HitchARide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53438E22A376F915E5C30634 /* Pods_HitchARide.framework */; };
 		5816B5F11F1816E100C36B1F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5816B5F01F1816E100C36B1F /* RoundedImageView.swift */; };
+		581834611F1B1E630018364D /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581834601F1B1E630018364D /* RoundedShadowView.swift */; };
+		581834631F1B203B0018364D /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581834621F1B203B0018364D /* CircleButtonView.swift */; };
+		581834651F1B26EF0018364D /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581834641F1B26EF0018364D /* RoundedShadowButton.swift */; };
 		5899A1371EED0D07003D42E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5899A1361EED0D07003D42E6 /* AppDelegate.swift */; };
 		5899A1391EED0D07003D42E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5899A1381EED0D07003D42E6 /* ViewController.swift */; };
 		5899A13C1EED0D07003D42E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5899A13A1EED0D07003D42E6 /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 		53438E22A376F915E5C30634 /* Pods_HitchARide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HitchARide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		540D82A771441B014E4282BD /* Pods_HitchARideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HitchARideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5816B5F01F1816E100C36B1F /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		581834601F1B1E630018364D /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		581834621F1B203B0018364D /* CircleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		581834641F1B26EF0018364D /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		5864065239B5D4E44D6D0BC6 /* Pods-HitchARide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitchARide.release.xcconfig"; path = "Pods/Target Support Files/Pods-HitchARide/Pods-HitchARide.release.xcconfig"; sourceTree = "<group>"; };
 		5899A1331EED0D07003D42E6 /* HitchARide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitchARide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5899A1361EED0D07003D42E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +183,9 @@
 			children = (
 				58A119681F1312C400D20D7A /* GradientView.swift */,
 				5816B5F01F1816E100C36B1F /* RoundedImageView.swift */,
+				581834601F1B1E630018364D /* RoundedShadowView.swift */,
+				581834621F1B203B0018364D /* CircleButtonView.swift */,
+				581834641F1B26EF0018364D /* RoundedShadowButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -475,8 +484,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581834651F1B26EF0018364D /* RoundedShadowButton.swift in Sources */,
+				581834631F1B203B0018364D /* CircleButtonView.swift in Sources */,
 				5816B5F11F1816E100C36B1F /* RoundedImageView.swift in Sources */,
 				5899A1391EED0D07003D42E6 /* ViewController.swift in Sources */,
+				581834611F1B1E630018364D /* RoundedShadowView.swift in Sources */,
 				5899A1371EED0D07003D42E6 /* AppDelegate.swift in Sources */,
 				58A119691F1312C400D20D7A /* GradientView.swift in Sources */,
 			);

@@ -26,9 +26,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQm-gC-eJ0" customClass="GradientView" customModule="HitchARide" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="wfb-6p-WWE"/>
+                                    <constraint firstAttribute="height" constant="125" id="wfb-6p-WWE"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-p1-PiH">
@@ -70,17 +70,32 @@
                                     <constraint firstAttribute="height" constant="30" id="q2m-G0-KwT"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLs-e8-bh0">
-                                <rect key="frame" x="16" y="587" width="343" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2N-jz-qYH">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLs-e8-bh0" customClass="RoundedShadowButton" customModule="HitchARide" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="iqa-oN-dtH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                        <state key="normal" title="REQUEST A RIDE">
+                                            <color key="titleColor" red="0.12939286231994629" green="0.12942266464233398" blue="0.12939092516899109" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htM-dk-UAl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="iqa-oN-dtH"/>
+                                    <constraint firstItem="fLs-e8-bh0" firstAttribute="top" secondItem="t2N-jz-qYH" secondAttribute="top" id="7sg-fV-HZV"/>
+                                    <constraint firstAttribute="height" constant="80" id="ahG-rP-m4q"/>
+                                    <constraint firstItem="fLs-e8-bh0" firstAttribute="leading" secondItem="t2N-jz-qYH" secondAttribute="leading" constant="20" id="alZ-PW-OcW"/>
+                                    <constraint firstAttribute="trailing" secondItem="fLs-e8-bh0" secondAttribute="trailing" constant="20" id="n62-p6-HF5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
-                                <state key="normal" title="REQUEST A RIDE">
-                                    <color key="titleColor" red="0.12939286231994629" green="0.12942266464233398" blue="0.12939092516899109" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIC-Na-gn8">
                                 <rect key="frame" x="299" y="519" width="60" height="60"/>
                                 <constraints>
@@ -89,7 +104,7 @@
                                 </constraints>
                                 <state key="normal" image="centerMapBtn"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlL-Bz-lM3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlL-Bz-lM3" customClass="RoundedShadowView" customModule="HitchARide" customModuleProvider="target">
                                 <rect key="frame" x="16" y="68" width="343" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -99,13 +114,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-an-PdY">
                                         <rect key="frame" x="0.0" y="0.0" width="323" height="25"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rx-DU-NK8">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rx-DU-NK8" userLabel="Circle Button View Green" customClass="CircleButtonView" customModule="HitchARide" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="5" width="15" height="15"/>
                                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="ETl-xx-fcx"/>
                                                     <constraint firstAttribute="height" constant="15" id="vTC-e4-t9G"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleButtonBorderColor">
+                                                        <color key="value" red="0.0" green="0.48501564025878907" blue="0.00014847482769554551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kze-Mu-4zN">
                                                 <rect key="frame" x="25" y="2" width="298" height="21"/>
@@ -129,13 +149,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1QB-9U-oPU">
                                         <rect key="frame" x="0.0" y="36" width="323" height="25"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anv-V9-Ebt">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anv-V9-Ebt" userLabel="Circle Button View Gray" customClass="CircleButtonView" customModule="HitchARide" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="5" width="15" height="15"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="HwD-jo-Zhh"/>
                                                     <constraint firstAttribute="width" constant="15" id="a0v-uo-1Nj"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="circleButtonBorderColor">
+                                                        <color key="value" red="0.49271665334701531" green="0.49271665334701531" blue="0.49271665334701531" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="aZB-zs-PJb">
                                                 <rect key="frame" x="25" y="2" width="298" height="21"/>
@@ -157,18 +182,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t2N-jz-qYH" secondAttribute="bottom" id="2uA-zb-HNL"/>
                             <constraint firstItem="zlL-Bz-lM3" firstAttribute="leading" secondItem="y0a-p1-PiH" secondAttribute="leading" id="3BS-kO-ntG"/>
                             <constraint firstItem="kQm-gC-eJ0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Rc-4Y-gbD"/>
                             <constraint firstItem="bud-Xy-wSZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4C3-hI-Eis"/>
                             <constraint firstItem="Om1-18-uHt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="8Vw-aT-SFU"/>
                             <constraint firstItem="Om1-18-uHt" firstAttribute="top" secondItem="y0a-p1-PiH" secondAttribute="bottom" constant="18" id="9EJ-BN-HWf"/>
                             <constraint firstAttribute="trailing" secondItem="kQm-gC-eJ0" secondAttribute="trailing" id="9Lu-oh-FFu"/>
-                            <constraint firstItem="fLs-e8-bh0" firstAttribute="top" secondItem="XIC-Na-gn8" secondAttribute="bottom" constant="8" id="AgN-bV-0M5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y0a-p1-PiH" secondAttribute="trailing" id="E5u-6d-aLr"/>
+                            <constraint firstAttribute="trailing" secondItem="t2N-jz-qYH" secondAttribute="trailing" id="Gbz-T4-jAx"/>
                             <constraint firstItem="kQm-gC-eJ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OKt-X3-BIr"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fLs-e8-bh0" secondAttribute="bottom" constant="20" id="Zld-WF-den"/>
                             <constraint firstItem="bud-Xy-wSZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="do9-6d-Fue"/>
-                            <constraint firstItem="fLs-e8-bh0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lnm-aP-vgj"/>
+                            <constraint firstItem="t2N-jz-qYH" firstAttribute="top" secondItem="XIC-Na-gn8" secondAttribute="bottom" constant="8" id="kke-a0-Gfv"/>
+                            <constraint firstItem="t2N-jz-qYH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lu9-rR-L63"/>
                             <constraint firstItem="y0a-p1-PiH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pEV-XN-SPo"/>
                             <constraint firstItem="XIC-Na-gn8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="po3-3c-2c8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Om1-18-uHt" secondAttribute="trailing" constant="10" id="qeA-9i-DFo"/>
@@ -177,11 +203,11 @@
                             <constraint firstItem="zlL-Bz-lM3" firstAttribute="top" secondItem="y0a-p1-PiH" secondAttribute="bottom" constant="8" symbolic="YES" id="tRR-8J-Zi4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bud-Xy-wSZ" secondAttribute="bottom" id="vCo-OC-UbZ"/>
                             <constraint firstItem="zlL-Bz-lM3" firstAttribute="trailing" secondItem="y0a-p1-PiH" secondAttribute="trailing" id="vex-sw-rtg"/>
-                            <constraint firstItem="fLs-e8-bh0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wNz-XA-d3E"/>
                             <constraint firstItem="zlL-Bz-lM3" firstAttribute="centerY" secondItem="Om1-18-uHt" secondAttribute="centerY" id="zcv-k8-v4j"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionBtn" destination="fLs-e8-bh0" id="exD-sb-EtY"/>
                         <outlet property="mapView" destination="bud-Xy-wSZ" id="XUo-De-zkS"/>
                     </connections>
                 </viewController>
