@@ -14,7 +14,7 @@ class RoundedShadowView: UIView {
         setUpRoundedShadowView()
     }
 
-    func setUpRoundedShadowView(){
+    func setUpRoundedShadowView() {
         self.layer.cornerRadius = 5
         self.layer.shadowOpacity = 0.3
         self.layer.shadowColor = UIColor.darkGray.cgColor

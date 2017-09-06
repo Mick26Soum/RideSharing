@@ -12,7 +12,7 @@ class CircleButtonView: UIView {
 
     @IBInspectable var circleButtonBorderColor: UIColor? {
         didSet{
-            // Expose Interface Builder Border properties to be set at runtime
+            // Expose Interface Builder border properties to be set at runtime
             setUpCircleButtonView()
         }
     }

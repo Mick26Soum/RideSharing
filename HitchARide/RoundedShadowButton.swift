@@ -35,7 +35,7 @@ class RoundedShadowButton: UIButton {
         spinner.hidesWhenStopped = true
         spinner.tag = 11
         
-     
+        // Animation starts when action btn is pressed and shouldLoad argument passed in
         if shouldLoad {
             self.addSubview(spinner)
     
@@ -44,7 +44,7 @@ class RoundedShadowButton: UIButton {
                 self.layer.cornerRadius = self.frame.height / 2
                 self.frame = CGRect(x: self.frame.midX - (self.frame.height / 2), y: self.frame.origin.y, width: self.frame.height, height: self.frame.height)
             }, completion: { (finished) in
-                if finished == true{
+                if finished == true {
                     spinner.startAnimating()
                     spinner.center = CGPoint(x: self.frame.width / 2 + 1, y: self.frame.width / 2 + 1)
                     UIView.animate(withDuration: 0.2, animations: {
@@ -54,7 +54,6 @@ class RoundedShadowButton: UIButton {
             })
             self.isUserInteractionEnabled = false
         }else {
-            
             self.isUserInteractionEnabled = true
             
             for subview in self.subviews {

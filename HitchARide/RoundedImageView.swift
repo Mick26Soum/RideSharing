@@ -14,7 +14,7 @@ class RoundedImageView: UIImageView {
         roundedImageView()
     }
     
-    func roundedImageView(){
+    func roundedImageView() {
         self.layer.cornerRadius = self.frame.width / 2
         self.clipsToBounds = true
     }

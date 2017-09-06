@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeVC.swift
 //  HitchARide
 //
 //  Created by MICK SOUMPHONPHAKDY on 6/10/17.
@@ -9,11 +9,12 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class HomeVC: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var actionBtn: RoundedShadowButton!
-   
+    
+    var delegate: CenterVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
