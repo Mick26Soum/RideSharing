@@ -15,23 +15,28 @@ enum SlideOutState {
 }
 
 enum ShowWhichVC {
-    case HomeVC
+    case homeVC
 }
 
-var showVC: ShowWhichVC = .HomeVC
-var leftVC: LeftSidePanelVC!
-var currentState: SlideOutState = .collapsed
+var showVC: ShowWhichVC = .homeVC
 
 class ContainerVC: UIViewController {
-    
     var homeVC: HomeVC!
+    var leftVC: LeftSidePanelVC!
+    var centerController: UIViewController!
+    
+    var currentState: SlideOutState = .collapsed
+    
+    var isHidden: Bool = false //state to determine if status bar is hidden
+    let centerExpandedOffset: CGFloat = 160
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initCenterVC(screen: showVC)
     }
     
     func initCenterVC(screen: ShowWhichVC) {
-        var presentingViewController: UIViewController
+        var presentingController: UIViewController
         
         showVC = screen
         
@@ -39,9 +44,20 @@ class ContainerVC: UIViewController {
             homeVC = UIStoryboard.homeVC()
             homeVC.delegate = self
         }
+        
+        presentingController = homeVC
+        
+        if let con = centerController {
+            con.view.removeFromSuperview()
+            con.removeFromParentViewController()
+        }
+        
+        centerController = presentingController
+        
+        view.addSubview(centerController.view)
+        addChildViewController(centerController)
+        centerController.didMove(toParentViewController: self)
     }
-    
-  
 }
 
 extension ContainerVC: CenterVCDelegate {
@@ -51,6 +67,7 @@ extension ContainerVC: CenterVCDelegate {
         if notAlreadyExpanded {
             addLeftPanelViewController()
         }
+        
         animateLeftPanel(shouldExpand: notAlreadyExpanded)
     }
     
@@ -68,7 +85,18 @@ extension ContainerVC: CenterVCDelegate {
     }
     
     func animateLeftPanel(shouldExpand: Bool) {
-        <#code#>
+        if shouldExpand{
+            isHidden = !isHidden
+            animateStatusBar()
+            
+            setUpWhiteCoverView()
+            currentState = .leftPanelExpanded
+        }else {
+            isHidden = !isHidden
+            animateStatusBar()
+            
+            hideWhiteCoverView()
+        }
     }
 }
 
